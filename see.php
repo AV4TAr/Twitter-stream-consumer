@@ -32,9 +32,7 @@
                     <div class="span4">
                         
                     </div>
-                    <div class="span12" id="data-display">
-                        Loading...
-                    </div>
+                    <div class="span12" id="data-display"></div>
                 </div>
             </section>
         </div>

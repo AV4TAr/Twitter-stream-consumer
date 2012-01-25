@@ -10,13 +10,13 @@ $(document).ready(function(){
             $.each(data, function(key, val) {
                 items.push('<div class="alert-message block-message info" id="' + val._id.$id + '" data_tw_id="'+val.id_str+'"><p><strong>' + val.user.screen_name + ':</strong> '+val.text+'. <span class="label">'+val.created_at+'</span><p></div>');
                 if(first_run){
-                    first_id = val._id.$id;
+                    first_id = val.id_str;
                     first_run = false;
                 }
                 $i++;
             });
             //$('#data-display').append(items.join(''));
-            $('#data-display').html(items.join(''));
+            $('#data-display').prepend(items.join(''));
             console.log("Last id: "+first_id);
             console.log("Fetched: "+$i);
         })

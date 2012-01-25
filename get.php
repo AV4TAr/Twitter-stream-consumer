@@ -10,17 +10,18 @@ $collection = $db->tweets;
 
 $cursor = $collection->find();//->limit(10);
 
-$rangeQuery = array("_id"=>-1);
+$rangeQuery = array();
 
+$limit = 10;
 if(isset($_GET["from"]) && $_GET["from"] !=0){
     $rangeQuery["_id"]=array('$gt'=>$_GET["from"]);
-} else {
-    //get the last 10
-    $cursor = $cursor->limit(10);
-}
+    
+    $limit = 20;
+} 
 
+$cursor = $cursor->limit($limit);
 
-$cursor->sort($rangeQuery);
+$cursor->sort(array("_id"=>-1));
 
 //after_id?
 

@@ -33,7 +33,7 @@
                         
                     </div>
                     <div class="span12" id="data-display">
-                        
+                        Loading...
                     </div>
                 </div>
             </section>

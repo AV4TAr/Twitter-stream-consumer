@@ -1,17 +1,19 @@
 <?php
+/**
+ * Gets the tweets from the mongo DB and return jsons
+ */
 header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 require_once 'mongo_connect.php';
-// get documents from mongo
+
+// just toggle debug
 $debug = false;
 if(isset($_GET["debug"])){
     $debug = true;
 }
 
 $collection = $db->tweets;
-
-
 
 $rangeQuery = array();
 

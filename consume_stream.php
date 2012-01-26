@@ -2,7 +2,7 @@
 require_once('phirehose/lib/Phirehose.php');
 require_once('phirehose/lib/OauthPhirehose.php');
 require_once('mongo_connect.php');
-require_once('twitter_config.php');
+require_once('conf/twitter_config.php');
 
 /**
  * Example of using Phirehose to display a live filtered stream using track words 
@@ -39,5 +39,5 @@ class FilterTrackConsumer extends OauthPhirehose
 
 // Start streaming
 $sc = new FilterTrackConsumer(OAUTH_TOKEN, OAUTH_SECRET, Phirehose::METHOD_FILTER);
-$sc->setTrack(array('#BIMandments'));
+$sc->setTrack(array('Uruguay', "#UY"));
 $sc->consume();

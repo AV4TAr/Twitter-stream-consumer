@@ -8,7 +8,6 @@ $debug = false;
 if(isset($_GET["debug"])){
     $debug = true;
 }
-error_reporting(E_ALL);
 
 $collection = $db->tweets;
 

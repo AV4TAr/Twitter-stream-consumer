@@ -1,10 +1,10 @@
 <?php
-//DB init
-// connects to localhost on port 27017 by default
-$mongo = new Mongo();
- 
-// connects to 192.168.25.190 on port 50100
-$mongo = new Mongo("mongodb://127.0.0.1:27017");
+require_once './conf/mongo_config.php';
+try{
+    $mongo = new Mongo();
+    $mongo = new Mongo("mongodb://".MONGO_HOST.":".MONGO_PORT);
+} catch (Exception $e){
+    echo "An error ocurred, cant connect to mongo, check configuration file. <br/> error Message: ".$e->getMessage();
+}
 
 $db = $mongo->BIMandments;
-?>

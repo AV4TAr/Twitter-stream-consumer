@@ -25,5 +25,5 @@ $(document).ready(function(){
     getData();
     setInterval( function(){
         getData();
-    }, 5000 );
+    }, 1000 );
 });

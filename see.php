@@ -11,10 +11,10 @@
         <div class="topbar" data-scrollspy="scrollspy" >
             <div class="topbar-inner">
                 <div class="container">
-                    <a class="brand" href="#">Twitter stream!!</a>
+                    <a class="brand" href="#">#BIMandments</a>
 
                     <ul class="nav">
-                        <li class="active"><a href="#overview">Overview</a></li>
+                        <li class="active"><a href="#overview">Home</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>

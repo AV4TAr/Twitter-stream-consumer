@@ -37,4 +37,5 @@
             </section>
         </div>
     </body>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </html>

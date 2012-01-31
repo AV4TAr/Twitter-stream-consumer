@@ -19,7 +19,7 @@ class FilterTrackConsumer extends OauthPhirehose
   	global $db;
   	
   	//Use this collection
-	$collection = $db->tweets;
+	$collection = $db->imported_tweets;
 
     /*
      * In this simple example, we will just display to STDOUT rather than enqueue.
@@ -39,5 +39,5 @@ class FilterTrackConsumer extends OauthPhirehose
 
 // Start streaming
 $sc = new FilterTrackConsumer(OAUTH_TOKEN, OAUTH_SECRET, Phirehose::METHOD_FILTER);
-$sc->setTrack(array('Uruguay', "#UY"));
+$sc->setTrack(array('BIMandments'));
 $sc->consume();

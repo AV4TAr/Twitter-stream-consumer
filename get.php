@@ -13,7 +13,8 @@ if(isset($_GET["debug"])){
     $debug = true;
 }
 
-$collection = $db->tweets;
+//$collection = $db->tweets;
+$collection = $db->imported_tweets;
 
 $rangeQuery = array();
 
@@ -34,7 +35,7 @@ $cursor->sort(array("id_str"=>-1));
 
 // iterate through the results
 echo json_encode(iterator_to_array($cursor));
-if($debug){
+if(false && $debug){
 
     print_r(iterator_to_array($cursor));
 
